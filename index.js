@@ -1,7 +1,7 @@
 const getSoExpenseComputationData = () => {
-  const soLargeEmpty = new Array(10000).fill({ isOdd: false });
+  const soLargeArray = new Array(10000).fill({ isOdd: false });
 
-  return soLargeEmpty.map((i, ind) => {
+  return soLargeArray.map((i, ind) => {
     const isOdd = !!(ind % 2);
 
     return {
@@ -27,6 +27,8 @@ const object = {
   }
 }
 
-console.log(object.hasOwnProperty('expenseData'));
+// invoke `get` method
+object.expenseData;
 
-console.log(object.expenseData);
+// avoid `get` computation and return cached expenseData
+object.expenseData;
